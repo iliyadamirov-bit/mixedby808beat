@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>808 BEAT — Музыкальное портфолио</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#090909;color:#f5f5f5;font-family:Arial,sans-serif}
+header{padding:28px 7%;border-bottom:1px solid #292929;display:flex;justify-content:space-between;align-items:center}
+.logo{font-size:27px;font-weight:900;letter-spacing:3px}
+.logo span{color:#888}
+nav a{color:#aaa;text-decoration:none;margin-left:20px;font-size:12px}
+.hero{padding:85px 7% 65px}
+.eyebrow{color:#888;letter-spacing:4px;font-size:11px}
+h1{font-size:clamp(55px,10vw,110px);letter-spacing:-5px;margin:20px 0}
+h1 span{color:#777}
+.hero p{color:#888;line-height:1.8;max-width:500px}
+section{padding:55px 7%}
+.line{height:1px;background:#292929;margin:0 7%}
+.top{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap}
+h2{font-size:24px;letter-spacing:2px}
+.filters{display:flex;gap:9px;flex-wrap:wrap;margin:25px 0 30px}
+.filters button{background:#151515;border:1px solid #333;color:#aaa;padding:12px 18px;cursor:pointer;font-size:11px}
+.filters button.active,.filters button:hover{background:#fff;color:#111}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:25px}
+.track{min-width:0}
+.cover{aspect-ratio:1;background:linear-gradient(135deg,#401c25,#090909);display:flex;align-items:center;justify-content:center;position:relative}
+.cover.blue{background:linear-gradient(135deg,#172b45,#080808)}
+.cover.gold{background:linear-gradient(135deg,#51402a,#080808)}
+.cover b{font-size:45px;letter-spacing:-3px}
+.cover small{position:absolute;bottom:14px;left:14px;color:#aaa;letter-spacing:3px}
+.info{padding:14px 0}
+.info h3{font-size:15px;margin:0 0 7px}
+.artist{font-size:12px;color:#888}
+.meta{display:flex;justify-content:space-between;margin-top:12px;color:#888;font-size:10px}
+audio{width:100%;margin-top:12px}
+.empty{display:none;color:#888;padding:20px 0}
+.about{background:#101010}
+.about p{color:#999;line-height:1.9;max-width:650px}
+.links{display:flex;gap:25px;margin-top:25px}
+.links a{color:#fff;text-decoration:none;border-bottom:1px solid #777;padding-bottom:5px}
+footer{padding:30px 7%;border-top:1px solid #292929;color:#666;font-size:11px;display:flex;justify-content:space-between}
+@media(max-width:700px){
+header{padding:22px 6%}
+nav a{margin-left:10px;font-size:10px}
+.hero{padding:60px 6%}
+section{padding:40px 6%}
+.grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+}
+@media(max-width:420px){.grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header>
+<div class="logo">808<span>BEAT.</span></div>
+<nav>
+<a href="#works">РАБОТЫ</a>
+<a href="#about">ОБО МНЕ</a>
+<a href="#contact">КОНТАКТЫ</a>
+</nav>
+</header>
+
+<div class="hero">
+<div class="eyebrow">MUSIC PRODUCTION / SOUND / CREDITS</div>
+<h1>808 <span>BEAT.</span></h1>
+<p>Музыкальное портфолио. Продакшн, создание битов, звук и музыкальные релизы.</p>
+</div>
+
+<div class="line"></div>
+
+<section id="works">
+<div class="top">
+<h2>МОИ РАБОТЫ</h2>
+<div id="count" class="artist">03 РЕЛИЗА</div>
+</div>
+
+<div class="filters">
+<button class="active" data-filter="all">ВСЕ</button>
+<button data-filter="hiphop">ХИП-ХОП</button>
+<button data-filter="trap">ТРЭП</button>
+<button data-filter="pop">ПОП</button>
+<button data-filter="rock">РОК</button>
+</div>
+
+<div class="grid" id="tracks">
+
+<article class="track" data-genre="hiphop">
+<div class="cover"><b>808</b><small>RELEASE 001</small></div>
+<div class="info">
+<h3>Название трека 01</h3>
+<div class="artist">Имя артиста</div>
+<div class="meta"><span>ХИП-ХОП</span><span>2026</span></div>
+</div>
+</article>
+
+<article class="track" data-genre="trap">
+<div class="cover blue"><b>BEAT</b><small>RELEASE 002</small></div>
+<div class="info">
+<h3>Название трека 02</h3>
+<div class="artist">Имя артиста</div>
+<div class="meta"><span>ТРЭП</span><span>2026</span></div>
+</div>
+</article>
+
+<article class="track" data-genre="pop">
+<div class="cover gold"><b>808</b><small>RELEASE 003</small></div>
+<div class="info">
+  <h3>Название трека 03</h3>
+<div class="artist">Имя артиста</div>
+<div class="meta"><span>ПОП</span><span>2026</span></div>
+</div>
+</article>
+
+</div>
+<div class="empty" id="empty">В этой категории пока нет релизов.</div>
+</section>
+
+<div class="line"></div>
+
+<section class="about" id="about">
+<div class="eyebrow">ABOUT THE PRODUCER</div>
+<h2>ОБО МНЕ</h2>
+<p>808 Beat — музыкальный продакшн и создание звука. Здесь собраны релизы и проекты, в создании которых я принимал участие.</p>
+</section>
+
+<section id="contact">
+<div class="eyebrow">LET'S WORK TOGETHER</div>
+<h2>СОТРУДНИЧЕСТВО</h2>
+<p class="artist">По вопросам сотрудничества и музыкального продакшна:</p>
+<div class="links">
+<a href="https://t.me/" target="_blank">TELEGRAM ↗</a>
+<a href="https://instagram.com/" target="_blank">INSTAGRAM ↗</a>
+</div>
+</section>
+
+<footer>
+<span>© 2026 808 BEAT</span>
+<span>MUSIC PRODUCTION & CREDITS</span>
+</footer>
+
+<script>
+const buttons=document.querySelectorAll('.filters button');
+const tracks=document.querySelectorAll('.track');
+const empty=document.getElementById('empty');
+const count=document.getElementById('count');
+
+buttons.forEach(button=>{
+button.addEventListener('click',()=>{
+buttons.forEach(b=>b.classList.remove('active'));
+button.classList.add('active');
+let filter=button.dataset.filter;
+let visible=0;
+tracks.forEach(track=>{
+let show=filter==='all'||track.dataset.genre===filter;
+track.style.display=show?'':'none';
+if(show)visible++;
+});
+empty.style.display=visible?'none':'block';
+count.textContent=String(visible).padStart(2,'0')+' РЕЛИЗА';
+});
+});
+</script>
+</body>
+</html>
